@@ -8,6 +8,17 @@
 </head>
 <body>
 
+    <header>
+        <ul>
+            <li>
+                <a href="{{ route('homepage') }}">Home</a>
+            </li>
+            <li>
+                <a href="{{ route('comics.index') }}">Comics List</a>
+            </li>
+        </ul>
+    </header>
+
     <main>
         @yield('main_content')
     </main>
