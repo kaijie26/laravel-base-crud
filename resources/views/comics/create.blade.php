@@ -31,8 +31,20 @@
         <br>
 
         <div>
+            <label for="price">Price</label>
+            <input type="text" name="price" id="price">
+        </div>
+        <br>
+
+        <div>
+            <label for="sale_date">Url image</label>
+            <input type="date" name="sale_date" id="sale_date">
+        </div>
+        <br>
+
+        <div>
             <label for="thumb">Url image</label>
-            <input type="text" name="thumb" id="thumb">
+            <input type="url" name="thumb" id="thumb">
         </div>
         <br>
         

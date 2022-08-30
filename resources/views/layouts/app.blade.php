@@ -16,6 +16,9 @@
             <li>
                 <a href="{{ route('comics.index') }}">Comics List</a>
             </li>
+            <li>
+                <a href="{{ route('comics.create') }}">Create Comic</a>
+            </li>
         </ul>
     </header>
 
