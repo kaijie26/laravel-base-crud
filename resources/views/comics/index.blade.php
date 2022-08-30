@@ -8,11 +8,7 @@
             {{-- Single-Comic --}}
             <div class="comic">
                 <div>Titolo: {{ $comic->title }}</div>
-                <div>Descrizione: {{ $comic->description }}</div>
-                <div>prezzo: {{ $comic->price }}</div>
-                <div>serie: {{ $comic->series }}</div>
-                <div>data vendita: {{ $comic->sale_date }}</div>
-                <div>genere: {{ $comic->type }}</div>
+                <a href="{{ route('comics.show', ['comic'=> $comic->id]) }}">Scopri Dettagli</a>
 
             </div>
             <br>
