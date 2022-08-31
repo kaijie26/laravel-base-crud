@@ -3,9 +3,15 @@
 @section('main_content')
     <h1>{{ $comic->title }}</h1>
     <div>Descrizione: {{ $comic->description }}</div>
-    <div>prezzo: {{ $comic->price }}</div>
-    <div>serie: {{ $comic->series }}</div>
-    <div>data vendita: {{ $comic->sale_date }}</div>
-    <div>genere: {{ $comic->type }}</div>
+    <br>
+    <div>Prezzo: {{ $comic->price }}</div>
+    <br>
+    <div>Serie: {{ $comic->series }}</div>
+    <br>
+    <div>Data vendita: {{ $comic->sale_date }}</div>
+    <br>
+    <div>Genere: {{ $comic->type }}</div>
+    <br>
+    <img src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
 
 @endsection

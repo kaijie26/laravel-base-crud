@@ -8,8 +8,16 @@
             {{-- Single-Comic --}}
             <div class="comic">
                 <div>Titolo: {{ $comic->title }}</div>
-                <a href="{{ route('comics.show', ['comic'=> $comic->id]) }}">Scopri Dettagli</a>
+                <div>
+                    <a href="{{ route('comics.show', ['comic'=> $comic->id]) }}">Scopri Dettagli</a>
 
+                </div>
+
+                <div>
+                    <a href="{{ route('comics.edit', ['comic'=> $comic->id]) }}">Modifica Dettagli</a>
+
+                </div>
+                
             </div>
             <br>
             
