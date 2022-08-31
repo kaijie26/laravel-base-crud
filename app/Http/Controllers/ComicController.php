@@ -45,6 +45,9 @@ class ComicController extends Controller
         // Richiedo tutti i dati 
         $form_data = $request->all();
 
+        // Validazione dei dati
+        $request->validate($this->getValidationRules());
+
         // Salvo nel db i dati e creo una nuova riga
         $new_comic = new Comic();
         $new_comic->fill($form_data);
@@ -102,5 +105,18 @@ class ComicController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    protected function getValidationRules() {
+        return [
+            'title' => 'required|max:60',
+            'series' => 'required|max:60',
+            'type' => 'required|max:30',
+            'description' => 'max:70000',
+            'price' => 'required|max:6',
+            'sale_date' => 'required',
+            'url_image' => 'required|max:70000',
+            
+        ];
     }
 }

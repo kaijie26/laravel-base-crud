@@ -13,7 +13,7 @@ class Comic extends Model
         'description',
         'thumb',
         'price',
-        'sale_date'
+        'sale_date',
 
     ];
 }
