@@ -17,6 +17,15 @@
                     <a href="{{ route('comics.edit', ['comic'=> $comic->id]) }}">Modifica Dettagli</a>
 
                 </div>
+
+                <div>
+                    <form action="{{ route('comics.destroy', ['comic'=> $comic->id]) }}" method="post">
+                        @csrf
+                        @method('DELETE')
+
+                        <input type="submit" value="Cancella">
+                    </form>
+                </div>
                 
             </div>
             <br>
