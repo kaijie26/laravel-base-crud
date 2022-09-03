@@ -12,12 +12,14 @@ class ComicController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
         $comics = Comic::all();
-
+        $page_data = $request->all();
+        $deleted = isset($page_data['deleted']) ? $page_data['deleted'] : null;
         $data = [
-            'comics' => $comics
+            'comics' => $comics,
+            'deleted' => $deleted
         ];
 
         return view('comics.index', $data);
@@ -125,7 +127,7 @@ class ComicController extends Controller
         $comic_to_delete = Comic::findOrFail($id);
         $comic_to_delete->delete();
 
-        return redirect()->route('comics.index');
+        return redirect()->route('comics.index', ['deleted' => 'yes']);
     }
 
     protected function getValidationRules() {
